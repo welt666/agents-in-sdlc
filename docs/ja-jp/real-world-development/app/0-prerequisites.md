@@ -3,7 +3,7 @@ title: "レッスン 0 - 前提条件"
 description: "GitHub Copilot app のレッスンに向けて、Tailspin Toys プロジェクト用の Node.js をインストールし、テンプレートからリポジトリの自分用コピーを作成します。"
 authors:
   - geektrainer
-lastUpdated: 2026-06-30
+lastUpdated: 2026-10-22
 ---
 
 GitHub Copilot app は、Copilot と GitHub の両方を一元的に扱うデスクトップアプリです。Issue や pull request にすばやくアクセスでき、もちろん GitHub Copilot を使った開発も可能です。このワークショップでは、Astro で構築された Tailspin Toys アプリと GitHub Copilot app を使い、ローカル環境で作業します。始める前に、Node.js がローカルにインストールされていることを確認してから、Copilot app をインストールします。
@@ -24,6 +24,7 @@ GitHub Copilot app は、Copilot と GitHub の両方を一元的に扱うデス
 
     ```shell
     node --version
+    npm --version
     ```
 
 3. プロジェクトの README と `package.json` に記載されている要件を満たしていれば、次のセクションに進めます。
@@ -39,12 +40,16 @@ GitHub Copilot app は、Copilot と GitHub の両方を一元的に扱うデス
 
     ```bash
     node --version
+    npm --version
     ```
 
 9. インストールしたバージョンが表示されることを確認します。
 
 > [!IMPORTANT]
-> 各ワークツリーには、プロジェクトの依存関係と E2E チェック用の Playwright Chromium も必要です。ワークツリーの準備では学習用リポジトリの README に従い、インストールの要求は内容を確認してから承認してください。
+> Copilot app のエージェントも `node --version` と `npm --version` を実行できる必要があります。普段使っているターミナルで成功しても、アプリから利用できるとは限りません。Node.js のインストール後、または PATH を変更した後は、アプリを完全に終了して再起動してください。セッション内でコマンドが引き続き失敗する場合は、続行する前に[セッション環境のトラブルシューティング][session-environment]を確認してください。
+
+> [!IMPORTANT]
+> 各ワークツリーには、プロジェクトの依存関係と E2E チェック用の Playwright Chromium も必要です。ワークツリーの準備では Tailspin Toys リポジトリの README に従い、インストールの要求は内容を確認してから承認してください。
 
 ## ラボ用リポジトリを設定する
 
@@ -86,3 +91,4 @@ Tailspin Toys プロジェクトの自分用コピーを使って作業します
 [node-download]: https://nodejs.org/en/download
 [template-repository]: https://docs.github.com/repositories/creating-and-managing-repositories/creating-a-template-repository
 [about-copilot-app]: https://docs.github.com/copilot/concepts/agents/github-copilot-app
+[session-environment]: ../3-agent-modes/#issue-からセッションを開始する
